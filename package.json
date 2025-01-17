@@ -1,0 +1,16 @@
+{
+  "name": "edge-er-trip",
+  "version": "1.0.0",
+  "main": "MesChrome.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron MesChrome.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "electron": "^34.0.0"
+    
+  }
+}
