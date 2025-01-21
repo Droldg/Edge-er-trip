@@ -28,7 +28,7 @@ function createWindow() {
   mainWindow.loadURL('https://www.messenger.com');
 }
 
-// Når Electron er klart, opretter vi vinduet
+// Når Electron er klar, opretter vi vinduet
 app.whenReady().then(() => {
   // Inden vi skaber vinduet, sætter vi Accept-Language til dansk
   forceDanishLocale();
