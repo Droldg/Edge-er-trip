@@ -38,6 +38,8 @@ const installer = require('electron-installer-debian');
       arch: 'amd64', // passer til x64
       icon: path.join(__dirname, 'img', 'wavy.png'),  // Icon til .deb
       categories: ['Utility'], // Debian-menu-kategori
+      description: "App til messenger med chromium",
+      executableName:"MesChromeApp"
       // Eventuelt flere metadata: description, maintainer, version, etc.
     };
 
