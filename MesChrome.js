@@ -7,11 +7,11 @@ app.commandLine.appendSwitch('lang', 'da');
 // Tving Accept-Language header til "da,en;q=0.8"
 function forceDanishLocale() {
   session.defaultSession.webRequest.onBeforeSendHeaders((details, callback) => {
-    // Overskriv "Accept-Language"
     details.requestHeaders['Accept-Language'] = 'da,en;q=0.8';
     callback({ cancel: false, requestHeaders: details.requestHeaders });
   });
 }
+
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -28,10 +28,11 @@ function createWindow() {
   mainWindow.loadURL('https://www.messenger.com');
 }
 
-// Når Electron er klar, opretter vi vinduet
-app.whenReady().then(() => {
-  // Inden vi skaber vinduet, sætter vi Accept-Language til dansk
+// Når Electron er klart, sætter vi sprog + loader extension + opretter vinduet
+app.whenReady().then(async () => {
   forceDanishLocale();
+
+
   createWindow();
 });
 
