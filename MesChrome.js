@@ -15,7 +15,7 @@ function forceDanishLocale() {
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 1000,
+    width: 1400,
     height: 800,
     icon: path.join(__dirname, 'img', 'wavy.png'),
     webPreferences: {
